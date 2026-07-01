@@ -1,7 +1,7 @@
 package com.MovieSearcher.config;
 
 public class AppConfig {
-    private static String language = "en-US";
+    private static String language = "pt-BR";
 
     public static String getLanguage() {
         return language;

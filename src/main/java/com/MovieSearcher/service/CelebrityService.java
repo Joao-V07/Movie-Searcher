@@ -1,5 +1,4 @@
 package com.MovieSearcher.service;
 
-public class MovieService {
-
+public class CelebrityService {
 }
