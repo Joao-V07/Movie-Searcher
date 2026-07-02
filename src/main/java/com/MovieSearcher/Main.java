@@ -1,10 +1,12 @@
 package com.MovieSearcher;
 
 import com.MovieSearcher.client.APIClient;
+import com.MovieSearcher.service.MovieService;
 
 public class Main {
     public static void main(String[] args) {
         APIClient client = new APIClient();
-        System.out.println(client.makeRequest("movie/1339713"));
+        MovieService movieService = new MovieService(client);
+        System.out.println(movieService.search("Obsession").toString());
     }
 }

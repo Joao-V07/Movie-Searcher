@@ -3,16 +3,9 @@ package com.MovieSearcher.model;
 public abstract class MediaItem {
     protected int id;
     protected String name;
+    protected String overview;
     protected double popularity;
     protected String picturePath;
-
-    public MediaItem(int id, String name, double popularity, String picturePath) {
-        this.id = id;
-        this.name = name;
-        this.popularity = popularity;
-        this.picturePath = picturePath;
-    }
-
 
     public int getId() {
         return id;
@@ -44,5 +37,13 @@ public abstract class MediaItem {
 
     public void setPicturePath(String picturePath) {
         this.picturePath = picturePath;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
     }
 }
