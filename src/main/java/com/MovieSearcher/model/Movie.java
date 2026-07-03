@@ -1,24 +1,24 @@
 package com.MovieSearcher.model;
 
 public class Movie extends AudioVisual{
-    private int duration;
+    private int runtime;
 
-    public int getDuration() {
-        return duration;
+    public int getRuntime() {
+        return runtime;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setRuntime(int runtime) {
+        this.runtime = runtime;
     }
 
 
     @Override
     public String toString() {
         return "Movie{" +
-                "duration=" + duration +
+                "runtime=" + runtime +
                 ", releaseDate='" + releaseDate + '\'' +
                 ", originalLanguage='" + originalLanguage + '\'' +
-                ", userLanguageTitle='" + userLanguageTitle + '\'' +
+                ", title='" + title + '\'' +
                 ", voteAverage=" + voteAverage +
                 ", genres=" + genres +
                 ", budget=" + budget +
@@ -26,12 +26,11 @@ public class Movie extends AudioVisual{
                 ", tagline='" + tagline + '\'' +
                 ", status='" + status + '\'' +
                 ", production=" + production +
-                ", creators=" + creators +
                 ", id=" + id +
-                ", name='" + name + '\'' +
+                ", originalTitle='" + originalTitle + '\'' +
                 ", overview='" + overview + '\'' +
                 ", popularity=" + popularity +
-                ", picturePath='" + picturePath + '\'' +
+                ", posterPath='" + posterPath + '\'' +
                 '}';
     }
 }

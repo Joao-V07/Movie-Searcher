@@ -1,19 +1,24 @@
 package com.MovieSearcher.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public abstract class AudioVisual extends MediaItem{
     protected String releaseDate;
     protected String originalLanguage;
-    protected String userLanguageTitle;
+    protected String title;
     protected double voteAverage;
-    protected List<String> genres;
+    protected List<Genre> genres;
     protected long budget;
     protected long revenue;
     protected String tagline;
     protected String status;
-    protected List<String> production;
-    protected List<String> creators;
+    @SerializedName("production_companies")
+    protected List<ProductionCompanies> production;
+    @SerializedName("poster_path")
+    protected String posterPath;
+
 
     public String getReleaseDate() {
         return releaseDate;
@@ -31,12 +36,12 @@ public abstract class AudioVisual extends MediaItem{
         this.originalLanguage = originalLanguage;
     }
 
-    public String getUserLanguageTitle() {
-        return userLanguageTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setUserLanguageTitle(String userLanguageTitle) {
-        this.userLanguageTitle = userLanguageTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public double getVoteAverage() {
@@ -47,11 +52,11 @@ public abstract class AudioVisual extends MediaItem{
         this.voteAverage = voteAverage;
     }
 
-    public List<String> getGenres() {
+    public List<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<String> genres) {
+    public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 
@@ -79,20 +84,12 @@ public abstract class AudioVisual extends MediaItem{
         this.status = status;
     }
 
-    public List<String> getProduction() {
+    public List<ProductionCompanies> getProduction() {
         return production;
     }
 
-    public void setProduction(List<String> production) {
+    public void setProduction(List<ProductionCompanies> production) {
         this.production = production;
-    }
-
-    public List<String> getCreators() {
-        return creators;
-    }
-
-    public void setCreators(List<String> creators) {
-        this.creators = creators;
     }
 
     public long getBudget() {

@@ -3,6 +3,7 @@ package com.MovieSearcher.model;
 import java.util.List;
 
 public class Celebrity extends MediaItem {
+    private String name;
     private int age;
     private String birthday;
     private String deathday;
@@ -10,6 +11,24 @@ public class Celebrity extends MediaItem {
     private List<String> knownFor;
     private String knownForDept;
     private String placeBirth;
+
+    public String getPicturePath() {
+        return picturePath;
+    }
+
+    public void setPicturePath(String picturePath) {
+        this.picturePath = picturePath;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String picturePath;
 
 
     public int getAge() {

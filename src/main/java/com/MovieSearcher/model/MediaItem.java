@@ -2,10 +2,9 @@ package com.MovieSearcher.model;
 
 public abstract class MediaItem {
     protected int id;
-    protected String name;
+    protected String originalTitle;
     protected String overview;
     protected double popularity;
-    protected String picturePath;
 
     public int getId() {
         return id;
@@ -15,12 +14,12 @@ public abstract class MediaItem {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getOriginalTitle() {
+        return originalTitle;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOriginalTitle(String originalTitle) {
+        this.originalTitle = originalTitle;
     }
 
     public double getPopularity() {
@@ -29,14 +28,6 @@ public abstract class MediaItem {
 
     public void setPopularity(double popularity) {
         this.popularity = popularity;
-    }
-
-    public String getPicturePath() {
-        return picturePath;
-    }
-
-    public void setPicturePath(String picturePath) {
-        this.picturePath = picturePath;
     }
 
     public String getOverview() {

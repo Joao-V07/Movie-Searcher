@@ -29,7 +29,7 @@ public class MovieService {
     }
 
     public Movie searchDetails(int id) {
-        String json = apiClient.makeRequest("movie/" + id);
+        String json = apiClient.makeRequest("movie/" + id + "?append_to_response=credits");
 
         return gson.fromJson(json, Movie.class);
     }
