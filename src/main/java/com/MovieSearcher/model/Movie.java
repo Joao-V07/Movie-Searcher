@@ -26,11 +26,11 @@ public class Movie extends AudioVisual{
                 ", tagline='" + tagline + '\'' +
                 ", status='" + status + '\'' +
                 ", production=" + production +
-                ", id=" + id +
+                ", credits=" + credits +
                 ", originalTitle='" + originalTitle + '\'' +
+                ", id=" + id +
                 ", overview='" + overview + '\'' +
                 ", popularity=" + popularity +
-                ", posterPath='" + posterPath + '\'' +
                 '}';
     }
 }

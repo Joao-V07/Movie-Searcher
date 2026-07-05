@@ -18,6 +18,8 @@ public abstract class AudioVisual extends MediaItem{
     protected List<ProductionCompanies> production;
     @SerializedName("poster_path")
     protected String posterPath;
+    protected Credits credits;
+    protected String originalTitle;
 
 
     public String getReleaseDate() {
@@ -98,5 +100,29 @@ public abstract class AudioVisual extends MediaItem{
 
     public void setBudget(long budget) {
         this.budget = budget;
+    }
+
+    public String getPosterPath() {
+        return posterPath;
+    }
+
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
+    }
+
+    public Credits getCredits() {
+        return credits;
+    }
+
+    public void setCredits(Credits credits) {
+        this.credits = credits;
+    }
+
+    public String getOriginalTitle() {
+        return originalTitle;
+    }
+
+    public void setOriginalTitle(String originalTitle) {
+        this.originalTitle = originalTitle;
     }
 }

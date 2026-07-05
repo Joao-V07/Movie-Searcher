@@ -1,16 +1,20 @@
 package com.MovieSearcher.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Celebrity extends MediaItem {
-    private String name;
-    private int age;
-    private String birthday;
-    private String deathday;
-    private int gender;
-    private List<String> knownFor;
-    private String knownForDept;
-    private String placeBirth;
+    protected String name;
+    protected int age;
+    protected String birthday;
+    protected String deathday;
+    protected int gender;
+    protected List<String> knownFor;
+    @SerializedName("known_for_department")
+    protected String knownForDept;
+    protected String placeBirth;
+    protected String picturePath;
 
     public String getPicturePath() {
         return picturePath;
@@ -27,9 +31,6 @@ public class Celebrity extends MediaItem {
     public void setName(String name) {
         this.name = name;
     }
-
-    private String picturePath;
-
 
     public int getAge() {
         return age;
@@ -85,5 +86,22 @@ public class Celebrity extends MediaItem {
 
     public void setPlaceBirth(String placeBirth) {
         this.placeBirth = placeBirth;
+    }
+
+    @Override
+    public String toString() {
+        return  "name='" + name + '\'' +
+                ", age=" + age +
+                ", birthday='" + birthday + '\'' +
+                ", deathday='" + deathday + '\'' +
+                ", gender=" + gender +
+                ", knownFor=" + knownFor +
+                ", knownForDept='" + knownForDept + '\'' +
+                ", placeBirth='" + placeBirth + '\'' +
+                ", picturePath='" + picturePath + '\'' +
+                ", id=" + id +
+                ", overview='" + overview + '\'' +
+                ", popularity=" + popularity +
+                '}';
     }
 }
