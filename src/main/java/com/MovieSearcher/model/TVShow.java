@@ -1,13 +1,20 @@
 package com.MovieSearcher.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class TVShow extends AudioVisual{
     private int numberOfSeasons;
-    private int numberOfEPS;
+    private int numberOfEpisodes;
+    @SerializedName("first_air_date")
     private String firstEPReleaseDate;
+    @SerializedName("last_air_date")
     private String lastEPReleaseDate;
-    protected List<String> creators;
+    @SerializedName("created_by")
+    private List<Creators> creators;
+    private String name;
+    private String originalName;
 
     public int getNumberOfSeasons() {
         return numberOfSeasons;
@@ -17,12 +24,12 @@ public class TVShow extends AudioVisual{
         this.numberOfSeasons = numberOfSeasons;
     }
 
-    public int getNumberOfEPS() {
-        return numberOfEPS;
+    public int getNumberOfEpisodes() {
+        return numberOfEpisodes;
     }
 
-    public void setNumberOfEPS(int numberOfEPS) {
-        this.numberOfEPS = numberOfEPS;
+    public void setNumberOfEpisodes(int numberOfEpisodes) {
+        this.numberOfEpisodes = numberOfEpisodes;
     }
 
     public String getFirstEPReleaseDate() {
@@ -41,11 +48,51 @@ public class TVShow extends AudioVisual{
         this.lastEPReleaseDate = lastEPReleaseDate;
     }
 
-    public List<String> getCreators() {
+    public List<Creators> getCreators() {
         return creators;
     }
 
-    public void setCreators(List<String> creators) {
+    public void setCreators(List<Creators> creators) {
         this.creators = creators;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public void setOriginalName(String originalName) {
+        this.originalName = originalName;
+    }
+
+    @Override
+    public String toString() {
+        return "TVShow{" +
+                "numberOfSeasons=" + numberOfSeasons +
+                ", numberOfEpisodes=" + numberOfEpisodes +
+                ", firstEPReleaseDate='" + firstEPReleaseDate + '\'' +
+                ", lastEPReleaseDate='" + lastEPReleaseDate + '\'' +
+                ", creators=" + creators +
+                ", name='" + name + '\'' +
+                ", originalLanguage='" + originalLanguage + '\'' +
+                ", voteAverage=" + voteAverage +
+                ", genres=" + genres +
+                ", tagline='" + tagline + '\'' +
+                ", status='" + status + '\'' +
+                ", production=" + production +
+                ", posterPath='" + posterPath + '\'' +
+                ", credits=" + credits +
+                ", originalName='" + originalName + '\'' +
+                ", overview='" + overview + '\'' +
+                ", id=" + id +
+                ", popularity=" + popularity +
+                '}';
     }
 }

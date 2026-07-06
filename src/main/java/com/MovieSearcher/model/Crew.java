@@ -18,7 +18,6 @@ public class Crew extends Celebrity {
                 "department='" + department + '\'' +
                 ", job='" + job + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
                 ", gender=" + gender +
                 '}';
     }

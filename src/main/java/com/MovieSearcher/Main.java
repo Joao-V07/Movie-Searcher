@@ -12,6 +12,7 @@ public class Main {
         CelebrityService celebrityService = new CelebrityService(client);
         TVService TVService = new TVService(client);
         //System.out.println(movieService.searchDetails(1339713));
-        System.out.println(celebrityService.searchDetails(1561370));
+        //System.out.println(celebrityService.searchDetails(1561370));
+        //System.out.println(TVService.searchDetails(1421));
     }
 }

@@ -10,18 +10,21 @@ public class Celebrity extends MediaItem {
     protected String birthday;
     protected String deathday;
     protected int gender;
-    protected List<String> knownFor;
+    @SerializedName("combined_credits")
+    protected CombinedCredits knownFor;
     @SerializedName("known_for_department")
     protected String knownForDept;
+    @SerializedName("place_of_birth")
     protected String placeBirth;
-    protected String picturePath;
+    protected String profilePath;
+    protected String biography;
 
-    public String getPicturePath() {
-        return picturePath;
+    public String getProfilePath() {
+        return profilePath;
     }
 
-    public void setPicturePath(String picturePath) {
-        this.picturePath = picturePath;
+    public void setProfilePath(String profilePath) {
+        this.profilePath = profilePath;
     }
 
     public String getName() {
@@ -64,14 +67,6 @@ public class Celebrity extends MediaItem {
         this.gender = gender;
     }
 
-    public List<String> getKnownFor() {
-        return knownFor;
-    }
-
-    public void setKnownFor(List<String> knownFor) {
-        this.knownFor = knownFor;
-    }
-
     public String getKnownForDept() {
         return knownForDept;
     }
@@ -88,20 +83,31 @@ public class Celebrity extends MediaItem {
         this.placeBirth = placeBirth;
     }
 
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
     @Override
     public String toString() {
-        return  "name='" + name + '\'' +
+        return "Celebrity{" +
+                "name='" + name + '\'' +
                 ", age=" + age +
                 ", birthday='" + birthday + '\'' +
                 ", deathday='" + deathday + '\'' +
                 ", gender=" + gender +
-                ", knownFor=" + knownFor +
+                ", knownFor=" + knownFor.getCast() + knownFor.getCrew() +
                 ", knownForDept='" + knownForDept + '\'' +
                 ", placeBirth='" + placeBirth + '\'' +
-                ", picturePath='" + picturePath + '\'' +
+                ", profilePath='" + profilePath + '\'' +
+                ", biography='" + biography + '\'' +
                 ", id=" + id +
-                ", overview='" + overview + '\'' +
                 ", popularity=" + popularity +
                 '}';
     }
+
+
 }

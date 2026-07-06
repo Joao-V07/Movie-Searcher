@@ -2,7 +2,6 @@ package com.MovieSearcher.model;
 
 public abstract class MediaItem {
     protected int id;
-    protected String overview;
     protected double popularity;
 
     public int getId() {
@@ -19,13 +18,5 @@ public abstract class MediaItem {
 
     public void setPopularity(double popularity) {
         this.popularity = popularity;
-    }
-
-    public String getOverview() {
-        return overview;
-    }
-
-    public void setOverview(String overview) {
-        this.overview = overview;
     }
 }

@@ -17,7 +17,6 @@ public class Cast extends Celebrity{
     public String toString() {
         return "character='" + character + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
                 ", knownForDept='" + knownForDept + '\'' +
                 '}';
     }

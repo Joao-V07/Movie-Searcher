@@ -5,13 +5,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public abstract class AudioVisual extends MediaItem{
-    protected String releaseDate;
     protected String originalLanguage;
-    protected String title;
     protected double voteAverage;
     protected List<Genre> genres;
-    protected long budget;
-    protected long revenue;
     protected String tagline;
     protected String status;
     @SerializedName("production_companies")
@@ -19,16 +15,8 @@ public abstract class AudioVisual extends MediaItem{
     @SerializedName("poster_path")
     protected String posterPath;
     protected Credits credits;
-    protected String originalTitle;
+    protected String overview;
 
-
-    public String getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
 
     public String getOriginalLanguage() {
         return originalLanguage;
@@ -36,14 +24,6 @@ public abstract class AudioVisual extends MediaItem{
 
     public void setOriginalLanguage(String originalLanguage) {
         this.originalLanguage = originalLanguage;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public double getVoteAverage() {
@@ -60,14 +40,6 @@ public abstract class AudioVisual extends MediaItem{
 
     public void setGenres(List<Genre> genres) {
         this.genres = genres;
-    }
-
-    public long getRevenue() {
-        return revenue;
-    }
-
-    public void setRevenue(long revenue) {
-        this.revenue = revenue;
     }
 
     public String getTagline() {
@@ -94,14 +66,6 @@ public abstract class AudioVisual extends MediaItem{
         this.production = production;
     }
 
-    public long getBudget() {
-        return budget;
-    }
-
-    public void setBudget(long budget) {
-        this.budget = budget;
-    }
-
     public String getPosterPath() {
         return posterPath;
     }
@@ -118,11 +82,11 @@ public abstract class AudioVisual extends MediaItem{
         this.credits = credits;
     }
 
-    public String getOriginalTitle() {
-        return originalTitle;
+    public String getOverview() {
+        return overview;
     }
 
-    public void setOriginalTitle(String originalTitle) {
-        this.originalTitle = originalTitle;
+    public void setOverview(String overview) {
+        this.overview = overview;
     }
 }
