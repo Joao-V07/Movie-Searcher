@@ -4,6 +4,7 @@ import com.MovieSearcher.client.APIClient;
 import com.MovieSearcher.service.CelebrityService;
 import com.MovieSearcher.service.MovieService;
 import com.MovieSearcher.service.TVService;
+import com.MovieSearcher.util.InputFormatter;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +15,6 @@ public class Main {
         //System.out.println(movieService.searchDetails(1339713));
         //System.out.println(celebrityService.searchDetails(1561370));
         //System.out.println(TVService.searchDetails(1421));
+        InputFormatter.formatInput("   Batman & Robin   ");
     }
 }
