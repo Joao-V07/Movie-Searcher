@@ -1,4 +1,4 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.shared;
 
 public abstract class MediaItem {
     protected int id;

@@ -1,6 +1,8 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.movie;
 
-public class Movie extends AudioVisual{
+import com.MovieSearcher.model.shared.AudioVisual;
+
+public class Movie extends AudioVisual {
     private int runtime;
     private long budget;
     private long revenue;

@@ -1,4 +1,4 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.celebrity;
 
 import com.google.gson.annotations.SerializedName;
 

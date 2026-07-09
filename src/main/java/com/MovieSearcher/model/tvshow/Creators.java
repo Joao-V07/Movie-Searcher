@@ -1,4 +1,6 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.tvshow;
+
+import com.MovieSearcher.model.celebrity.Celebrity;
 
 public class Creators extends Celebrity {
 

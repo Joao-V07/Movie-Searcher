@@ -1,6 +1,8 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.shared;
 
-public class Cast extends Celebrity{
+import com.MovieSearcher.model.celebrity.Celebrity;
+
+public class Cast extends Celebrity {
     private String character;
     private int order;
 

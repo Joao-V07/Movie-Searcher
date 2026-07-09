@@ -1,10 +1,11 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.tvshow;
 
+import com.MovieSearcher.model.shared.AudioVisual;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class TVShow extends AudioVisual{
+public class TVShow extends AudioVisual {
     private int numberOfSeasons;
     private int numberOfEpisodes;
     @SerializedName("first_air_date")

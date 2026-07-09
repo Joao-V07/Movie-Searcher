@@ -1,4 +1,4 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.shared;
 
 import java.util.List;
 

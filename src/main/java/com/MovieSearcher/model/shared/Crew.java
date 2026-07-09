@@ -1,4 +1,6 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.shared;
+
+import com.MovieSearcher.model.celebrity.Celebrity;
 
 public class Crew extends Celebrity {
     private String department;

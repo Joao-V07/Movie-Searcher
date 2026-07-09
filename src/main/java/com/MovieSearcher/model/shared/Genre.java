@@ -1,4 +1,4 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.shared;
 
 public class Genre {
     private int id;

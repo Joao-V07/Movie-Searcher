@@ -1,8 +1,7 @@
-package com.MovieSearcher.model;
+package com.MovieSearcher.model.celebrity;
 
+import com.MovieSearcher.model.shared.MediaItem;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class Celebrity extends MediaItem {
     protected String name;

@@ -1,8 +1,8 @@
 package com.MovieSearcher.service;
 
 import com.MovieSearcher.client.APIClient;
-import com.MovieSearcher.model.APIResponse;
-import com.MovieSearcher.model.Celebrity;
+import com.MovieSearcher.model.shared.APIResponse;
+import com.MovieSearcher.model.celebrity.Celebrity;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
