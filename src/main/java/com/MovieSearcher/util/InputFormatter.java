@@ -10,7 +10,6 @@ public class InputFormatter {
         }
         String trimmedInput = input.trim();
         String normalizedInput = trimmedInput.replaceAll("\\s+", " ");
-        System.out.println(URLEncoder.encode(normalizedInput, StandardCharsets.UTF_8));
         return URLEncoder.encode(normalizedInput, StandardCharsets.UTF_8);
     }
 }

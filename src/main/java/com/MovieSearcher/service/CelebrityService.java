@@ -31,7 +31,6 @@ public class CelebrityService {
     //TODO: implement language fallback if biography does not exist in the selected language.
     public Celebrity searchDetails(int id){
         String json = apiClient.makeRequest("person/" + id + "?append_to_response=combined_credits");
-        System.out.println(json);
 
         return gson.fromJson(json, Celebrity.class);
     }
