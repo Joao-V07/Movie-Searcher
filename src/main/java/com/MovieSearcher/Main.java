@@ -5,10 +5,26 @@ import com.MovieSearcher.controller.Controller;
 import com.MovieSearcher.service.CelebrityService;
 import com.MovieSearcher.service.MovieService;
 import com.MovieSearcher.service.TVService;
-import com.MovieSearcher.util.InputFormatter;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("ui/SearchView.fxml"));
+        Scene scene = new Scene(root);
+
+        primaryStage.setTitle("Movie Searcher");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
     public static void main(String[] args) {
+        launch(args);
         APIClient client = new APIClient();
         MovieService movieService = new MovieService(client);
         CelebrityService celebrityService = new CelebrityService(client);

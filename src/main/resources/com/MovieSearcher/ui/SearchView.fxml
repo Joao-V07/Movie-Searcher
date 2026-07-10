@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: rgb(277, 211, 111);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MovieSearcher.ui.SearchController">
+   <children>
+      <RadioButton fx:id="englishBtn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="English">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="languageGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="portugueseBtn" layoutX="126.0" layoutY="14.0" mnemonicParsing="false" text="Português" toggleGroup="$languageGroup">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label id="titleLbl" fx:id="titleLbl" alignment="CENTER" contentDisplay="TOP" layoutX="171.0" layoutY="97.0" prefHeight="60.0" prefWidth="358.0" text="Movie Searcher">
+         <font>
+            <Font name="Modern No. 20" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="subtitleLbl" layoutX="18.0" layoutY="196.0" text="Search for a Movie, TV Series or Celebrity (Actor, Actress, Director, Writer etc)!" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="inputTxt" layoutX="141.0" layoutY="281.0" prefHeight="43.0" prefWidth="418.0" promptText="Example: Top Gun: Maverick" />
+      <ListView fx:id="LlistView" layoutX="141.0" layoutY="324.0" managed="false" prefHeight="149.0" prefWidth="418.0" />
+      <Button fx:id="searchBtn" layoutX="287.0" layoutY="363.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Search">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

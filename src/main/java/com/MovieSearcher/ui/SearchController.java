@@ -1,4 +1,5 @@
 package com.MovieSearcher.ui;
 
-public class UI {
+public class SearchController {
+
 }
