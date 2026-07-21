@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MovieSearcher.ui.ResultsController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="inputResultsLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="600.0" text="USER INPUT" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="allBtn" mnemonicParsing="false" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="resultsFilterGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="moviesBtn" mnemonicParsing="false" text="Movies" toggleGroup="$resultsFilterGroup" />
+                  <RadioButton fx:id="TVBtn" mnemonicParsing="false" text="TV Shows" toggleGroup="$resultsFilterGroup" />
+                  <RadioButton fx:id="celebrityBtn" mnemonicParsing="false" text="Celebrities" toggleGroup="$resultsFilterGroup" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+.card {
+    -fx-border-color: rgba(143, 143, 143, 1);
+    -fx-background-color: rgba(191, 191, 191, 0.1);
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.image {
+    -fx-border-color: rgba(143, 143, 143, 1);
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
