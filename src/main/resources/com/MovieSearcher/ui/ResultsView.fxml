@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MovieSearcher.ui.ResultsController">
    <children>
@@ -24,16 +25,35 @@
             </HBox>
             <HBox alignment="BOTTOM_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="20.0">
                <children>
-                  <RadioButton fx:id="allBtn" mnemonicParsing="false" text="All">
+                  <ToggleButton fx:id="allFilterBtn" mnemonicParsing="false" text="All">
                      <toggleGroup>
-                        <ToggleGroup fx:id="resultsFilterGroup" />
+                        <ToggleGroup fx:id="filterGroup" />
                      </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="moviesBtn" mnemonicParsing="false" text="Movies" toggleGroup="$resultsFilterGroup" />
-                  <RadioButton fx:id="TVBtn" mnemonicParsing="false" text="TV Shows" toggleGroup="$resultsFilterGroup" />
-                  <RadioButton fx:id="celebrityBtn" mnemonicParsing="false" text="Celebrities" toggleGroup="$resultsFilterGroup" />
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="moviesFilterBtn" mnemonicParsing="false" text="Movies" toggleGroup="$filterGroup">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="TVFilterBtn" mnemonicParsing="false" text="TV Shows" toggleGroup="$filterGroup">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="celebrityFilterBtn" mnemonicParsing="false" text="Celebrities" toggleGroup="$filterGroup">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
                </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
             </HBox>
+            <ListView fx:id="resultsListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
    </children>
